@@ -1,5 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhilasha Ravichander</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <script src="https://kit.fontawesome.com/08daa0274c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- <style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style> -->
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
+    }
+  
+    strong, b {
+      font-weight: 700;
+    }
+  
+    .light {
+      font-weight: 300;
+    }
+  </style>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
+  <style>
+    .label-dataset {
+       background-color: #9b59b6;
+    }
+
+    .label-dataset[href]:hover,
+    .label-dataset[href]:focus {
+       background-color: #8e44ad;
+    }
+
+    .label-video {
+       background-color: #ffcccc;
+    }
+
+    .label-best {
+       background-color: #99004d;
+    }
+
+    .label-short {
+       background-color: #d27979;
+    }
+
+    .label-long {
+       background-color: #26004d;
+    }
+
+
+    .label-pdf {
+       background-color: #643191;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+
+    .label-code {
+       background-color: #4350c6;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+
+    .label-slides {
+       background-color: #317d91;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+
+    .label-website {
+       background-color: #99004d;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+
+    .label-short {
+       background-color: #076b3e;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+
+    .label-long {
+       background-color: #379138;
+       color: white;
+       padding: 2px;
+       margin-left: 1px;
+       margin-right: 1px;
+    }
+ </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffffff;
+      color: #111827;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #3b82f6;
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 1rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .intro img {
+      width: 180px;
+      height: 180px;
+      border-radius: 9999px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .intro-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .intro-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro-text p {
+      font-size: 1rem;
+      color: #374151;
+    }
+    main {
+      max-width: 900px;
+      margin: 0rem auto;
+    }
+    section {
+      margin-bottom: 0rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      /* border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem; */
+    }
+    .pub {
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #3b82f6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- <h1>Abhilasha Ravichander</h1> -->
+    <h1>
+        <span style="font-weight: 400;">Abhilasha</span>
+        <span style="font-weight: 400;">Ravichander</span>
+      </h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./publications.html">Publications</a>
+      <a href="./advising.html">Contact</a>
+      <a href="./talks.html">Short Bio</a>
+      <!-- <a href="./personal.html">Miscellany</a> -->
+    </nav>
+  </header>
+
+  <section class="intro">
+
+    <div class="intro-text">
+
+
+<section id="news" style="text-align: left;">
+<!-- 
+    <div class="container" tabindex="-1"> -->
+
+        <!--Navigation bar-->
+        
+           <h2>What's New</h2>
+           💫 Extremely excited to be joining the Max Planck Institute for Software Systems as an Assistant Professor in Fall 2025! </br></br>
+
+           <!-- 🎤 I was on the <a href="https://www.mindsmatterpodcast.com/">Women in AI Research podcast</a>, to talk about my research on LLM hallucinations</br> -->
+
+           🏆 HALoGEN won a <b>best paper award</b> at the TrustNLP workshop at NAACL 2025 🎉 </br></br>
+
+                🌴 I am speaking in a panel on "Navigating Research in the Age of LLMs" at the <a href="https://www.winlp.org/winlp-2024-workshop/">Widening NLP workshop</a> at EMNLP 2024.</a></br></br>
+    
+                ⭐ I am at the <a href="https://www.cics.umass.edu/events/rising-stars-generative-ai">"Rising Stars in Generative AI" workshop at UMass Amherst.</a></br></br>
+    
+                🏆 OLMo won the <b>ACL 2024 Best Theme Paper Award</b> 🎉 </br></br>
+    
+                🏆 Dolma won the <b>ACL 2024 Best Resource Paper Award</b> 🎉 </br></br>
+    
+                🏆 Artifacts or Abduction? won a <b>best paper award</b> at <a href="https://www.mascsll.org/cfp/">MASC-SLL 2024</a> 🎉 </br></br>
+    
+                📚 I co-organized the <a href="https://sites.google.com/view/privatenlp/">Workshop on Privacy in Natural Language Processing @ACL 2024</a></br></br>
+    
+                📚 I co-organized the <a href="https://sites.google.com/view/repl4nlp2023">Workshop on Representation Learning for NLP @ ACL 2023</a>.  </br></br>
+    
+                🗣️ I was on the <a href="https://www.mindsmatterpodcast.com/">Minds Matter podcast</a>, to talk about AI!</br></br>
+    
+                🗣️ Talk at the National University of Singapore. </br></br>
+    
+                🗣️ Talk at UMass NLP.  </br></br>
+    
+                ⭐ I am at the <a href="https://risingstars.utexas.edu/participants">Rising Stars in EECS workshop</a>
+                at the University of Texas at Austin. </br></br>
+    
+                🏆 <a href="https://arxiv.org/abs/2211.00295">CondaQA</a> won a <b>best paper
+                    award</b> at the <a href="https://socalnlp.github.io/symp22/index.html">2022 SoCal NLP
+                    symposium</a> 🎉  </br></br>
+    
+                ⭐ I was selected as a <a href="https://datascience.uchicago.edu/rising-stars-alumni/">Rising Star in Data
+                    Science</a> by the University of Chicago.</br></br>
+    
+                
+                💻 I will be spending the summer interning at the Allen Institute for AI with Matt Gardner and Ana Marasovic.</br></br>
+    
+    
+                🏆 I was an outstanding reviewer at ACL 2020 and EMNLP 2020. </br></br>
+    
+    
+                🤝 I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series, with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky.</br></br>
+    
+                🗣️ I will be speaking in a panel on "The Role of Active Privacy Management in a World Where the Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in Brussels, Belgium.</br></br>
+    
+                🤝 I will be helping lead a research team at the OurCS workshop at CMU. If you are an undergraduate woman, please do consider attending! Funds for hotels and meals will be provided.</br></br>
+    
+                💻 I will be spending the summer interning at MSR Montreal with Adam Trischler, Jackie Cheung, and Kaheer Suleman.</br></br>
+    
+                🏆 Our work, "Stress Test Evaluation for Natural Language Inference" won an <a href = "http://coling2018.org/coling-2018-best-papers/">Area Chair Favorite Paper award at COLING 2018</a>! 🎉 </br></br>
+    
+                            
+                🎓 I will be starting my PhD at the Language Technologies Institute, Carnegie Mellon University in Fall 2018.</br></br>
+    
+                📚 I am at the <a href="http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in Tubingen. Let me know if you'd like to meet up!</br></br>
+    
+                🏆 Our team was selected to participate in the <a href="https://developer.amazon.com/alexaprize">Alexa Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the selected teams.</br></br>
+    
+                🏆 Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in 10-701 (Introduction to Machine Learning (PhD)).</br></br>
+    
+
+           <!-- <div style="height:150px;border:1px solid #ccc;overflow:auto;">
+               <div class="label-striped"><a href="https://arxiv.org/abs/2402.00838">OLMo</a> won the <b>ACL 2024 Best Theme Paper Award</b> 🎉  </div>
+              <a href="https://arxiv.org/abs/2402.00159">Dolma</a> won the <b>ACL 2024 Best Resource Paper Award</b> 🎉 </br>
+              <div class="label-striped"><a href="https://arxiv.org/abs/2402.12483">Artifacts or Abduction?</a> was presented at <a href="https://www.mascsll.org/cfp/">MASC-SLL 2024</a> and won a <b>best paper
+                 award</b> 🎉 </div>
+              I am co-organizing the <a href="https://sites.google.com/view/privatenlp/">Workshop on Privacy in Natural Language Processing @ACL 2024</a></br>
+              <div class="label-striped">I co-organized the <a href="https://sites.google.com/view/repl4nlp2023">Workshop on Representation Learning for NLP @ ACL 2023</a>.  </div>
+              Talk at the National University of Singapore.</br>
+              <div class="label-striped">Talk at UMass NLP.  </div>
+              I will be at the <a href="https://risingstars.utexas.edu/participants">Rising Stars in EECS workshop</a>
+              at the University of Texas at Austin.</br>
+            <div style="height:150px;border:1px solid #ccc;overflow:auto;">
+                 -->
+
+              <!-- <div class="label-striped"><a href="https://arxiv.org/abs/2211.00295">CondaQA</a> won a <b>best paper
+                    award</b> at the <a href="https://socalnlp.github.io/symp22/index.html">2022 SoCal NLP
+                    symposium</a> 🎉 </div>
+              I was selected as a <a href="https://datascience.uchicago.edu/rising-stars-alumni/">Rising Star in Data
+                 Science</a> by the University of Chicago.</br>
+              <div class="label-striped">I was an outstanding reviewer at ACL 2020 and EMNLP 2020.</div>
+              I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series,
+              with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky.</br>
+              <div class="label-striped"> I will be speaking in a panel on "The Role of Active Privacy Management in a
+                 World Where the
+                 Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in
+                 Brussels, Belgium.
+              </div>
+              I will be helping lead a research team at the OurCS workshop at CMU. If you are an undergraduate woman,
+              please
+              do consider attending! Funds for hotels and meals will be provided.</br>
+              <div class="label-striped">I will be spending the summer interning at MSR Montreal with Adam Trischler
+                 and Kaheer Suleman,
+                 working on teaching machines commonsense reasoning.
+              </div>
+              I will be attending ACL, YRRSDS and SIGDIAL 2018 in Melbourne. Ping me if you'd like to
+              chat!</br>
+              <div class="label-striped">Our work, "Stress Test Evaluation for Natural Language Inference" was an <a
+                    href="http://coling2018.org/coling-2018-best-papers/"><b>Area Chair Favorite Paper at COLING
+                       2018</b></a>!
+              </div>
+              I will be at the <a href="https://newgeneralization.github.io/">Generalization in Deep
+                 Learning</a> workshop at NAACL 2018. Ping me if you'd like to chat!</br>
+              <div class="label-striped">I will be starting my PhD at the Language Technologies Institute, Carnegie
+                 Mellon University in
+                 Fall 2018.
+              </div>
+              I am at the <a href="http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in
+              Tubingen. Let me know if you'd like to meet up!</br>
+              <div class="label-striped">Our team was selected to participate in the <a
+                    href="https://developer.amazon.com/alexaprize">Alexa
+                    Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the
+                 selected teams.
+              </div>
+              Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in
+              10-701 (Introduction to Machine Learning (PhD)).</br>
+           </div> -->
+
+
+           <!--       class="table table-striped"
+              <table> -->
+           <!--       <table>
+              <tbody>
+                        
+                <li> I was recognized as an outstanding reviewer at ACL 2020 and EMNLP 2020. </li>.
+                      <li> I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series, with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky. </li>.
+              
+                      <li> I will be speaking in a panel on "The Role of Active Privacy Management in a World Where the Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in Brussels, Belgium.</li>.
+                      <li> I will be helping organize the OurCS workshop at CMU. If you are an undergraduate woman, please do consider attending! Funds for hotels and meals will be provided.</li>.
+              
+                <li> I will be spending the summer interning at MSR Montreal with Adam Trischler and Kaheer Suleman, working on teaching machines commonsense reasoning.</li>
+                <li> I will be attending ACL, YRRSDS and SIGDIAL 2018 in Melbourne. Ping me if you'd like to chat!</li>
+                <li>Our work, "Stress Test Evaluation for Natural Language Inference" was an <a href = "http://coling2018.org/coling-2018-best-papers/">Area Chair Favorite Paper at COLING 2018</a>!  </li>
+              
+                <li> I will be at the <a href = "https://newgeneralization.github.io/">Generalization in Deep Learning</a> workshop at NAACL 2018. Ping me if you'd like to chat!</li>
+                <li> I will be starting my PhD at the Language Technologies Institute, Carnegie Mellon University in Fall 2018.</li>
+               <li>I am at the <a href = "http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in Tubingen. Let me know if you'd like to meet up! </li>
+              <li>Our team was selected to participate in the <a href = "https://developer.amazon.com/alexaprize">Alexa Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the selected teams.</li>
+              <li>Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in 10-701 (Introduction to Machine Learning (PhD)). </li>
+              <li></li>
+              </tbody></table> -->
+        <!-- </div> -->
+     </div>
+
+</section>
+
+   
+
+  </main>
+
+  <footer>
+    Last updated May 2025. 
+  </footer>
+</body>
+</html>
+
+
+<!-- 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
    <meta charset="utf-8">
@@ -185,212 +589,8 @@
    <!-- Page Content -->
    <!--div class="clearfix hidden-sm-up"></div-->
 
-   <div class="row" id="navbar">
-      <div id="menu"
-         style="background-color:#30429c;border:1px solid #ccc; font-size:16px;position:fixed;z-index: 1100;">
-         <div>
-            <a href="./index.html" style="color:#FFFFFF">Home</a>
-         </div>
-         <div>
-            <a href="./index.html#news" style="color:#FFFFFF">News</a>
-         </div>
-         <div>
-            <a href="./index.html#publications" style="color:#FFFFFF">Publications</a>
-         </div>
-         <!--               <div>-->
-         <!--                  <a href="#service" style="color:#FFFFFF">Service</a>-->
-         <!--               </div>-->
-         <!--               <div>-->
-         <!--                  <a href="#contact" style="color:#FFFFFF">Contact</a>-->
-         <!--               </div>-->
 
-         <script>
-            $(function () {
-               const current = window.location.pathname.split("/");
-               $('#menu div a').each(function () {
-                  const $this = $(this);
-                  // if the current path is like this link, make it active
-                  if (current.indexOf($this.attr("href")) !== -1) {
-                     $this.parent().addClass("now");
-                  }
-               })
-            });
-         </script>
-      </div>
-   </div>
-
-   <div class="container" style="padding-top: 10px;max-width: 80%; ">
-      <div class="row justify-content-center">
-         <div class="col-sm-12 col-md-12 col-lg-10">
-            </br></br>
-            <!-- Jumbotron Header -->
-            <!--div class="jumbotron" style="display: inline-block">
-               <img src="files/M6.jpg" alt="Abhilasha Ravichander" style="padding-left:10px; margin-right: 15px; max-width:135px;float:left">
-               <p id="intro-text">Hi! I'm Abhilasha Ravichander, currently a PhD student at the University of Washington.
-               I'm interested in natural language processing, specifically contextual language modelling and social science NLP applications.
-               </p>ebf1f5 image.jpg
-               </div-->
-            <!-- <div class="" style="padding: 2rem 1rem;background-color:#f0f0f5;"> -->
-               <div class="" style="padding: 2rem 1rem;background-color:#ebebeb;">
-               
-               <div class="container row justify-content-center">
-                  <div class="col-lg-3 col-md-3 col-sm-12">
-                     <img class="profile" src="resources/ai2_pp.png" alt="Abhilasha Ravichander"
-                        style="width: 100%; margin-bottom: 2em;">
-                     <center>
-                        <p> /ɑ.bʰi.ˈla.ʃə/ <a href="https://www.howtopronounce.com/abhilasha/32203542" target="_blank">
-                              (listen)</a> </p>
-
-                        <!-- 
-                           <a class="twitter-follow-button" data-show-count="false"
-                              href="https://twitter.com/Lasha1608"
-                              data-size="large">
-                           Twitter @Lasha1608</a> -->
-                        <p>
-
-                           <a href="mailto:aravicha@cs.washington.edu" target="_blank"><i class="fa fa-envelope"
-                                 style="font-size:24px;color:black"></i></a>
-                           <a href="https://twitter.com/lasha_nlp" target="_blank" style="font-size:24px;"><i
-                                 class="fa fa-twitter"></i></a>
-                           <a href="https://sigmoid.social/@lasha_nlp" target="_blank"><i class="fab fa-mastodon"
-                                 style="font-size:24px;;color:black"></i></a>
-                           <a href="https://www.linkedin.com/in/abhilasha-ravichander-57524958" target="_blank"
-                              style="font-size:24px;"><i class="fa fa-linkedin"></i></a>
-                           <a href="https://www.semanticscholar.org/author/Abhilasha-Ravichander/3023068"
-                              target="_blank"><i class="ai ai-semantic-scholar-square ai-3x"
-                                 style="font-size:24px;;color:black"></i></a>
-                           <a href="https://scholar.google.com/citations?user=6vLsKGsAAAAJ" target="_blank"><i
-                                 class="fa fa-google" style="font-size:24px;"></i></a>
-                           <a href="https://github.com/AbhilashaRavichander" target="_blank"><i class="fa fa-github"
-                                 style="font-size:24px;color:black"></i></a>
-
-                           <a href="https://lasharavichander.github.io/Resume_Website.pdf" target="_blank"><i
-                                 class="fa fa-book" style="font-size:24px;"></i></a>
-
-                        </p>
-
-                        <!--         <a href="https://twitter.com/intent/tweet?screen_name=Lasha1608&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false" data-size="large">Tweet to @Lasha1608</a> -->
-                     </center>
-                     <!--                 <a class="btn btn-light" href="http://twitter.com/Lasha1608" target="_blank">
-                        <img src="files/twitter-icon.png" class="icon" title="Twitter Profile" alt="Twitter Profile">
-                        </a>
-                        <a class="btn btn-light" href="https://scholar.google.com/citations?user=gFN4QUYAAAAJ&hl=en" target="_blank">
-                        <img src="files/google-scholar-icon.png" class="icon" title="Google Scholar Profile" alt="Google Scholar Profile">
-                        </a>
-                        <a class="btn btn-light" href="https://www.semanticscholar.org/author/Abhilasha-Ravichander/2729164" target="_blank">
-                        <img src="files/s2-logo-bw.png" class="icon" title="Semantic Scholar Profile" alt="Semantic Scholar Profile">
-                        </a> -->
-                  </div>
-                  <div class="col-lg-9 col-md-9 col-sm-12 lead" style="padding-right:0px;">
-                     <h2 class="display-4">Abhilasha Ravichander</h2>
-                     <p>
-                        I am a postdoctoral scholar at the <a href="https://nlp.washington.edu/" target="_blank"> Paul G. Allen Center for Computer Science and Engineering at the University of Washington</a>.
-                        I completed my PhD from <a href="https://www.cs.cmu.edu/"
-                           target="_blank">Carnegie Mellon University</a>.</br></br>
-
-                        My research focuses on building <i>trustworthy</i> language models, by:</br>
-                        (1) formulating techniques to <b>rigorously diagnose and validate models and datasets</b>, </br>
-                        (2) developing methods to <b>understand large language models and the mechanisms that drive their predictions</b>, and </br>
-                        (3) building frameworks that enable greater <b>access and control over LLMs.</b></br></br>
-                        
-                        For more about my work, please see my <a href="./index.html#publications">publications</a>. </br> </br>
-
-                        ✨ <b>I am on the academic job market for the 2024-2025 cycle.</b>✨  
-
-                     </p>
-                     <!--   
-
-                                             (3) developing principles for documenting, curating and collecting datasets<b>developing princuip.</b></br></br>
-
-                                                           <p>
-                        I am a Postdoc/Young Investigator at the <a href="https://allenai.org" target="_blank">Allen Institute for AI (AI2)</a>, working on project <a target="_blank" href="https://allenai.org/commonsense/">Mosaic</a>.
-                        My research focuses on building robust and generalizable systems to process natural language, by contributing techniques to diagnose and validate models, by developing stronger reasoning approaches, and by explaining the reasoning process behind model's predictive decisions.
-                        </p> -->
-                     <!-- where I was advised by 
-                        <a target="_blank" href="https://homes.cs.washington.edu/~nasmith/">Eduard Hovy</a> and 
-                        <a target="_blank" href="https://homes.cs.washington.edu/~yejin/">Norman Sadeh</a>
-                         and have interned at <b>AI2</b> and <b>Microsoft Research</b>, studying how deep learning models process challenging phenomena in natural language. -->
-                     <!--p
-                        </p-->
-                  </div>
-                  <!--               <div class="col-12" style="background: white; padding: 4px; border-radius: 5px 5px; font-size: 1.15rem; font-weight: 300;">
-                     <p style="margin-bottom: .5em;">
-                     <em><strong>December 2021 update</strong></em>🧑‍🎓:I will likely be taking students this coming PhD application cycle. If you're interested in working with me on <em>social commonsense, social biases in language, or ethics in AI</em>, please apply to <a href="https://www.lti.cs.cmu.edu/apply-lti" target="_blank">CMU's LTI</a>.
-                     </p>
-                     <p style="margin-bottom: .5em;">
-                     <em><strong>July 2021 update</strong></em>👨🏼‍🎓: I successfully defended my PhD thesis titled <em>Positive AI with Social Commonsense Models</em> (<a target="_blank" href="pdfs/Ravichander2021positiveAIwithSocialCommonsenseModels.pdf">read the thesis here</a>, or <a href="https://www.youtube.com/watch?v=VKd4Y7Ykh6o" target="_blank">watch the recording here<a/>). Thanks to my advisors, committee, and everyone who attended!
-                     </p>
-                     <p style="margin-bottom: .5em;">
-                     <em><strong>May 2021 update</strong></em>🥳:  I will be joining <a href="https://www.lti.cs.cmu.edu/" target="_blank">CMU's LTI</a> department as an assistant professor👨🏼‍🏫in Fall 2022. If you wish to work with me, <a href="contact.html">see the "contact" page</a>. Before starting there, I will be a postdoc at <a href="https://allenai.org" target="_blank">AI2</a> on project <a target="_blank" href="https://allenai.org/commonsense/">Mosaic</a> 👨🏼‍🔬 starting Fall 2021.
-                     </p>
-                     </div> -->
-               </div>
-            </div>
-         </div>
-      </div>
-
-   </br></br>
-
-      <div class="container" tabindex="-1">
-
-        <div name="news" id="news">
-            <h3>What's New</h3>
-            🌴 I am speaking in a panel on "Navigating Research in the Age of LLMs" at the <a href="https://www.winlp.org/winlp-2024-workshop/">Widening NLP workshop</a> at EMNLP 2024.</a></br></br>
-
-            ⭐ I am at the <a href="https://www.cics.umass.edu/events/rising-stars-generative-ai">"Rising Stars in Generative AI" workshop at UMass Amherst.</a></br></br>
-
-            🏆 OLMo won the <b>ACL 2024 Best Theme Paper Award</b> 🎉 </br></br>
-
-            🏆 Dolma won the <b>ACL 2024 Best Resource Paper Award</b> 🎉 </br></br>
-
-            🏆 Artifacts or Abduction? won a <b>best paper award</b> at <a href="https://www.mascsll.org/cfp/">MASC-SLL 2024</a> 🎉 </br></br>
-
-            📚 I co-organized the <a href="https://sites.google.com/view/privatenlp/">Workshop on Privacy in Natural Language Processing @ACL 2024</a></br></br>
-
-            📚 I co-organized the <a href="https://sites.google.com/view/repl4nlp2023">Workshop on Representation Learning for NLP @ ACL 2023</a>.  </br></br>
-
-            🗣️ I was on the <a href="https://www.mindsmatterpodcast.com/">Minds Matter podcast</a>, to talk about AI!</br></br>
-
-            🗣️ Talk at the National University of Singapore. </br></br>
-
-            🗣️ Talk at UMass NLP.  </br></br>
-
-            ⭐ I am at the <a href="https://risingstars.utexas.edu/participants">Rising Stars in EECS workshop</a>
-            at the University of Texas at Austin. </br></br>
-
-            🏆 <a href="https://arxiv.org/abs/2211.00295">CondaQA</a> won a <b>best paper
-                award</b> at the <a href="https://socalnlp.github.io/symp22/index.html">2022 SoCal NLP
-                symposium</a> 🎉  </br></br>
-
-            ⭐ I was selected as a <a href="https://datascience.uchicago.edu/rising-stars-alumni/">Rising Star in Data
-                Science</a> by the University of Chicago.</br></br>
-
-            
-            💻 I will be spending the summer interning at the Allen Institute for AI with Matt Gardner and Ana Marasovic.</br></br>
-
-
-            🏆 I was an outstanding reviewer at ACL 2020 and EMNLP 2020. </br></br>
-
-
-            🤝 I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series, with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky.</br></br>
-
-            🗣️ I will be speaking in a panel on "The Role of Active Privacy Management in a World Where the Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in Brussels, Belgium.</br></br>
-
-            🤝 I will be helping lead a research team at the OurCS workshop at CMU. If you are an undergraduate woman, please do consider attending! Funds for hotels and meals will be provided.</br></br>
-
-            💻 I will be spending the summer interning at MSR Montreal with Adam Trischler, Jackie Cheung, and Kaheer Suleman.</br></br>
-
-            🏆 Our work, "Stress Test Evaluation for Natural Language Inference" won an <a href = "http://coling2018.org/coling-2018-best-papers/">Area Chair Favorite Paper award at COLING 2018</a>! 🎉 </br></br>
-
-                        
-            🎓 I will be starting my PhD at the Language Technologies Institute, Carnegie Mellon University in Fall 2018.</br></br>
-
-            📚 I am at the <a href="http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in Tubingen. Let me know if you'd like to meet up!</br></br>
-
-            🏆 Our team was selected to participate in the <a href="https://developer.amazon.com/alexaprize">Alexa Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the selected teams.</br></br>
-
-            🏆 Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in 10-701 (Introduction to Machine Learning (PhD)).</br></br>
-
+  
 
 
             <!-- <div style="height:150px;border:1px solid #ccc;overflow:auto;">
@@ -456,14 +656,6 @@
                <li>Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in 10-701 (Introduction to Machine Learning (PhD)). </li>
                <li></li>
                </tbody></table> -->
-         </div>
-      </div>
-      </div>
-      <!-- </div> -->
-      <!--   <div class="container"> -->
-      </br>
-      </br>
-      
 
 
 
@@ -513,4 +705,4 @@
    }
 </style>
 
-</html>
+</html> -->
