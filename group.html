@@ -166,9 +166,10 @@
       flex-shrink: 0;
     }
     .person-list {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 2rem;
+      justify-items: center;
       margin-bottom: 0.5rem;
     }
     
@@ -375,7 +376,6 @@
           </div>
         </div>
 
-      <div class="person-list">
         <div class="person-item">
           <div class="person-photo">
             <!-- <span class="person-photo-placeholder">👤</span> -->
@@ -387,38 +387,40 @@
           </div>
         </div>
 
-
-        <div class="person-list">
-          <div class="person-item">
-            <div class="person-photo">
-              <!-- <span class="person-photo-placeholder">👤</span> -->
-              <img src="./resources/lab/noam.jpeg" alt="Noam Dahan">
-            </div>
-            <div class="person-info">
+        <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/noam.jpeg" alt="Noam Dahan">
+          </div>
+          <div class="person-info">
             <a href="https://github.com/edahanoam" target="_blank" class="person-link">Noam Dahan</a>
             <span class="person-role">Research Intern</span>
-            </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="person-list">
         <div class="person-item">
           <div class="person-photo">
             <!-- <span class="person-photo-placeholder">👤</span> -->
             <img src="./resources/lab/advaith.png" alt="Advaith Malladi">
           </div>
           <div class="person-info">
-          <a href="https://advaithmall.github.io/" target="_blank" class="person-link">Advaith Malladi</a>
-          <span class="person-role">Research Intern</span>
+            <a href="https://advaithmall.github.io/" target="_blank" class="person-link">Advaith Malladi</a>
+            <span class="person-role">Research Intern</span>
+          </div>
+        </div>
+
+        <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/Abdullah_Hashmat_MPI.jpg" alt="Abdullah Hashmat">
+          </div>
+          <div class="person-info">
+            <a href="https://hashmat02.github.io/" target="_blank" class="person-link">Abdullah Hashmat</a>
+            <span class="person-role">Research Intern</span>
           </div>
         </div>
       </div>
     </div>
-
-
-    </br></br>
 
     <div class="section">
       <div class="section-title">Current and Past Student Collaborators</div>
