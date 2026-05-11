@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhilasha Ravichander - Awards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #ffffff;
+      color: #292524;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e7e5e4;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #1c1917;
+      letter-spacing: 0.3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #57534e;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      letter-spacing: 0.2px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #1c1917;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    h2 {
+      font-family: 'Crimson Pro', serif;
+      color: #1c1917;
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.35rem;
+    }
+
+    .page-note {
+      color: #78716c;
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 1.6rem;
+    }
+
+    .award-list {
+      list-style: none;
+      border-top: 1px solid #e7e5e4;
+    }
+
+    .award-list li {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      gap: 1.25rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #f5f5f4;
+    }
+
+    .award-name {
+      display: block;
+      color: #1c1917;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .award-year {
+      color: #78716c;
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .award-title {
+      color: #44403c;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .award-meta {
+      color: #78716c;
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+
+    .publication-link {
+      color: #78716c;
+      font-size: 0.95rem;
+      margin-top: 1.8rem;
+    }
+
+    a {
+      color: #292524;
+      text-decoration: underline;
+      text-decoration-color: #d6d3d1;
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration-color: #78716c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #78716c;
+      font-size: 0.9rem;
+      border-top: 1px solid #e7e5e4;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      main {
+        padding: 2.5rem 1rem 3rem;
+      }
+
+      h2 {
+        font-size: 1.9rem;
+      }
+
+      .award-list li {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Abhilasha Ravichander</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./group.html">People</a>
+        <a href="./contact.html">Opportunities</a>
+        <a href="./talks.html">Short Bio</a>
+        <a href="./awards.html" class="active">Awards</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2>Awards and Honors</h2>
+
+    <ul class="award-list">
+      <li>
+        <span class="award-year">2025</span>
+        <div>
+          <span class="award-name">ACL Outstanding Paper Award</span>
+          <div class="award-title">HALoGEN: Fantastic LLM Hallucinations and Where To Find Them</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2025</span>
+        <div>
+          <span class="award-name">TrustNLP Workshop Best Paper Award</span>
+          <div class="award-title">HALoGEN: Fantastic LLM Hallucinations and Where To Find Them</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2025</span>
+        <div>
+          <span class="award-name">NAACL Outstanding Paper Award Nomination</span>
+          <div class="award-title">Information-Guided Identification of Training Data Imprint in (Proprietary) Large Language Models</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2025</span>
+        <div>
+          <span class="award-name">ICLR Spotlight</span>
+          <div class="award-title">WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">Rising Star in Generative AI</span>
+         
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">ACL Best Resource Paper Award</span>
+          <div class="award-title">Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">ACL Best Theme Paper Award</span>
+          <div class="award-title">OLMo: Accelerating the Science of Language Models</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">GeekWire Innovation of the Year Award</span>
+          <div class="award-title">OLMo: Accelerating the Science of Language Models</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">MASC-SLL Best Paper Award</span>
+          <div class="award-title">Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question?</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">ICLR Spotlight</span>
+          <div class="award-title">What's In My Big Data?</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div>
+          <span class="award-name">NAACL Outstanding Paper Award Nomination</span>
+          <div class="award-title">MacGyver: Are Large Language Models Creative Problem Solvers?</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2022</span>
+        <div>
+          <span class="award-name">Rising Star in EECS</span>
+          
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2022</span>
+        <div>
+          <span class="award-name">SoCal NLP Symposium Best Paper Award</span>
+          <div class="award-title">CondaQA: A Contrastive Reading Comprehension Dataset for Reasoning about Negation</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2021</span>
+        <div>
+          <span class="award-name">Rising Star in Data Science</span>
+          
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2020</span>
+        <div>
+          <span class="award-name">ACL Outstanding Reviewer</span>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2020</span>
+        <div>
+          <span class="award-name">EMNLP Outstanding Reviewer</span>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2018</span>
+        <div>
+          <span class="award-name">COLING Area Chair Favorite Paper Award</span>
+          <div class="award-title">Stress Test Evaluation for Natural Language Inference</div>
+        </div>
+      </li>
+    </ul>
+
+    <p class="publication-link">See the <a href="./publications.html">publications page</a> for paper details and links.</p>
+  </main>
+
+  <footer>
+    Last updated May 2026.
+  </footer>
+</body>
+</html>

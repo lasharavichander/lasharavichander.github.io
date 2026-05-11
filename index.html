@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,427 +8,653 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script src="https://kit.fontawesome.com/08daa0274c.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<!-- <style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-</style> -->
-<style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 500;
-    }
-  
-    strong, b {
-      font-weight: 700;
-    }
-  
-    .light {
-      font-weight: 300;
-    }
-  </style>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
-  <style>
-    .label-dataset {
-       background-color: #9b59b6;
-    }
-
-    .label-dataset[href]:hover,
-    .label-dataset[href]:focus {
-       background-color: #8e44ad;
-    }
-
-    .label-video {
-       background-color: #ffcccc;
-    }
-
-    .label-best {
-       background-color: #99004d;
-    }
-
-    .label-short {
-       background-color: #d27979;
-    }
-
-    .label-long {
-       background-color: #26004d;
-    }
-
-
-    .label-pdf {
-       background-color: #643191;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
-
-    .label-code {
-       background-color: #4350c6;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
-
-    .label-slides {
-       background-color: #317d91;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
-
-    .label-website {
-       background-color: #99004d;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
-
-    .label-short {
-       background-color: #076b3e;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
-
-    .label-long {
-       background-color: #379138;
-       color: white;
-       padding: 2px;
-       margin-left: 1px;
-       margin-right: 1px;
-    }
- </style>
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&amp;family=Lato:wght@300;400;700&amp;display=swap"
+    rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #111827;
-      line-height: 1.6;
+
+    :root {
+      --ink: #1c1917;
+      --text: #3f3a37;
+      --muted: #6f6862;
+      --line: #e7e5e4;
+      --soft-line: #f1efed;
+      --paper: #ffffff;
+      --wash: #fbfaf8;
+      --accent: #8f2347;
+      --accent-soft: #f7e8ee;
+      --teal: #0f766e;
+      --teal-soft: #e7f3f1;
+      --gold: #9a5f12;
+      --gold-soft: #fbf2dc;
     }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.68;
+    }
+
     header {
-      background-color: #ffffff;
-      color: #111827;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    header h1 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: #111827;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #3b82f6;
-    }
-    .intro {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 3rem 1rem 2rem;
+
+    .header-content {
       max-width: 900px;
       margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+
+    header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0.3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #57534e;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      letter-spacing: 0.2px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--ink);
+    }
+
+    .intro {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 2.75rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--soft-line);
+    }
+
+    .intro::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .intro-left {
+      float: left;
+      width: 220px;
+      margin: 0.3rem 2.1rem 1rem 0;
+      text-align: center;
+    }
+
     .intro img {
-      width: 180px;
-      height: 180px;
-      border-radius: 9999px;
+      display: block;
+      width: 220px;
+      height: 220px;
+      border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(28, 25, 23, 0.12);
     }
+
+    .social-links {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.8rem;
+    }
+
+    .social-links a {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: #d6b2c0;
+      transform: translateY(-1px);
+    }
+
+    .social-links i {
+      font-size: 22px;
+    }
+
     .intro-text {
-      flex: 1;
-      min-width: 250px;
+      min-width: 0;
     }
+
     .intro-text h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+      font-family: 'Crimson Pro', serif;
+      font-size: 2.55rem;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+      letter-spacing: 0;
     }
-    .intro-text p {
+
+    .intro-text h2 .bold {
+      font-weight: 700;
+    }
+
+    .intro-text h2 .light {
+      font-weight: 300;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+
+    .pronunciation {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.45rem;
+      font-style: italic;
+    }
+
+    .role {
+      color: #3f3a37;
       font-size: 1rem;
-      color: #374151;
+      margin-bottom: 0.8rem;
     }
+
+    .intro-text p {
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    .intro-text p.hero-statement {
+      font-size: 1.02rem;
+      line-height: 1.72;
+      color: #2f2a27;
+    }
+
+    .intro-text a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: #d6d3d1;
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.2s ease;
+    }
+
+    .intro-text a:hover {
+      text-decoration-color: #78716c;
+    }
+
     main {
-      max-width: 900px;
-      margin: 0rem auto;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.9rem 2rem 4rem;
     }
-    section {
-      margin-bottom: 0rem;
-    }
-    section h2 {
-      font-size: 1.5rem;
-      /* border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem; */
-    }
-    .pub {
+
+    main p {
+      color: var(--text);
       margin-bottom: 1rem;
+      line-height: 1.8;
     }
+
+    main b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    main a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: #d6d3d1;
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.2s ease;
+    }
+
+    main a:hover {
+      text-decoration-color: #78716c;
+    }
+
+    section {
+      margin-top: 2.15rem;
+    }
+
+    section h2 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 0.85rem 0;
+      letter-spacing: 0;
+    }
+
+    .home-primary section:first-child {
+      margin-top: 0;
+    }
+
+    .research-section {
+      margin-top: 0;
+    }
+
+    .research-lede {
+      color: #2f2a27;
+      font-size: 1.04rem;
+      line-height: 1.78;
+      margin-bottom: 1.25rem;
+    }
+
+    .research-grid {
+      display: grid;
+      gap: 0.9rem;
+      margin: 1.2rem 0 1.15rem;
+    }
+
+    .research-item {
+      font-family: Candara, Constantia, "Avenir Next", Palatino, Cambria, Times, serif;
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+      border: 1px solid #d8aa98;
+      background: #fbf1ec;
+      padding: 0.85rem 1rem 0.9rem;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(28, 25, 23, 0.04);
+    }
+
+    .research-creativity {
+      border-color: #b8c9ae;
+      background: #f0f6ec;
+    }
+
+    .research-reliable {
+      border-color: #d9c394;
+      background: #fbf5e6;
+    }
+
+    .research-copy {
+      min-width: 0;
+    }
+
+    .research-item h3 {
+      color: #9a4f35;
+      font-size: 1rem;
+      line-height: 1.35;
+      margin-bottom: 0.25rem;
+    }
+
+    .research-creativity h3 {
+      color: #5f7a55;
+    }
+
+    .research-reliable h3 {
+      color: #8a6931;
+    }
+
+    .research-visual {
+      width: 70px;
+      height: 70px;
+      justify-self: start;
+      color: #9a4f35;
+    }
+
+    .research-creativity .research-visual {
+      color: #5f7a55;
+    }
+
+    .research-reliable .research-visual {
+      color: #8a6931;
+    }
+
+    .research-visual .soft-fill {
+      fill: currentColor;
+      opacity: 0.12;
+    }
+
+    .research-visual .mid-fill {
+      fill: currentColor;
+      opacity: 0.28;
+    }
+
+    .research-visual .stroke {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .research-item p {
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.68;
+      margin: 0;
+    }
+
+    .intro-list,
+    .news-list {
+      list-style: none;
+      line-height: 1.72;
+    }
+
+    .intro-list li,
+    .news-list li {
+      color: var(--text);
+      margin-bottom: 0.45rem;
+      padding-left: 1.05rem;
+      position: relative;
+    }
+
+    .intro-list li::before,
+    .news-list li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    .intro-list b {
+      color: var(--ink);
+    }
+
+    .announcement {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 6px 2px;
+      margin: 30px 0;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+
+    .announcement p {
+      color: #78350f;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .announcement strong {
+      font-weight: 600;
+    }
+
+    .announcement a {
+      color: #78350f;
+      text-decoration: underline;
+      text-decoration-color: #fbbf24;
+      font-weight: 500;
+    }
+
+    .announcement a:hover {
+      text-decoration-color: #f59e0b;
+    }
+
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #6b7280;
+      padding: 3rem 2rem;
+      color: #78716c;
       font-size: 0.9rem;
+      border-top: 1px solid #e7e5e4;
     }
-    a {
-      color: #3b82f6;
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      .intro {
+        padding: 2.5rem 1rem 2rem;
+      }
+
+      .intro-left {
+        float: none;
+        width: 180px;
+        margin: 0 0 1.5rem;
+        text-align: left;
+      }
+
+      .intro img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .intro-text {
+        min-width: auto;
+      }
+
+      .intro-text h2 {
+        font-size: 2.25rem;
+      }
+
+      main {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .research-item {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 0.75rem;
+      }
+
+      .research-visual {
+        width: 56px;
+        height: 56px;
+      }
+
     }
   </style>
 </head>
+
 <body>
   <header>
-    <!-- <h1>Abhilasha Ravichander</h1> -->
-    <h1>
-        <span style="font-weight: 400;">Abhilasha</span>
-        <span style="font-weight: 400;">Ravichander</span>
-      </h1>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./publications.html">Publications</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./talks.html">Short Bio</a>
-      <!-- <a href="./personal.html">Miscellany</a> -->
-    </nav>
+    <div class="header-content">
+      <h1>Abhilasha Ravichander</h1>
+      <nav>
+        <a href="./index.html" class="active">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./group.html">People</a>
+        <a href="./contact.html">Opportunities</a>
+        <a href="./talks.html">Short Bio</a>
+        <a href="./awards.html">Awards</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="intro">
-    <div>
-    <img src="resources/ai2_pp.png" alt="Profile photo of Abhilasha Ravichander" />
+  <section class="intro" aria-labelledby="intro-heading">
+    <div class="intro-left">
+      <img src="resources/ai2_pp.png" alt="Profile photo of Abhilasha Ravichander" />
+      <div class="social-links">
+        <a href="/cdn-cgi/l/email-protection#0a6b686263666b79626b3a3a384a6d676b636624696567" target="_blank"
+          rel="noopener" aria-label="Email">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/lasha_nlp" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://bsky.app/profile/lasha.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+          <i class="fab fa-bluesky"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=6vLsKGsAAAAJ" target="_blank" rel="noopener"
+          aria-label="Google Scholar">
+          <i class="ai ai-google-scholar-square"></i>
+        </a>
+        <a href="https://lasharavichander.github.io/Resume_Website.pdf" target="_blank" rel="noopener" aria-label="CV">
+          <i class="ai ai-cv-square"></i>
+        </a>
+      </div>
+    </div>
 
-    <div>
-        <center>
-
-        <a href="mailto:abhilasha002@gmail.com" target="_blank"><i class="fa fa-envelope"
-              style="font-size:24px;color:black"></i></a>
-        <a href="https://twitter.com/lasha_nlp" target="_blank" style="font-size:24px;"><i
-              class="fa fa-twitter"></i></a>
-        <a href="https://bsky.app/profile/lasha.bsky.social" target="_blank"><i class="fab fa-bluesky"
-              style="font-size:24px;;color:black"></i></a>
- 
-              <!-- <a href="https://bsky.app/profile/lasha.bsky.social" target="_blank" style="display:inline-block; width:24px; height:24px;"><i class="fa-brands fa-bluesky"></i>
-               </a> -->
-        <!-- <a href="https://www.semanticscholar.org/author/Abhilasha-Ravichander/3023068"
-           target="_blank"><i class="ai ai-semantic-scholar-square ai-3x"
-              style="font-size:24px;;color:black"></i></a> -->
-        <a href="https://scholar.google.com/citations?user=6vLsKGsAAAAJ" target="_blank"><i
-              class="ai ai-google-scholar-square ai-3x" style="font-size:24px;"></i></a>
-        <!-- <a href="https://github.com/AbhilashaRavichander" target="_blank"><i class="fa fa-github"
-              style="font-size:24px;color:black"></i></a> -->
- 
-        <a href="https://lasharavichander.github.io/Resume_Website.pdf" target="_blank"><i class="ai ai-cv-square ai-3x" style="font-size:24px;color:black"></i></a>
-    </center>
-        </div>
-    
-
-</div>
     <div class="intro-text">
-      <!-- <h2>Abhilasha Ravichander</h2> -->
-      <h2>
-        <span style="font-weight: 800;">Abhilasha</span>
-        <span style="font-weight: 200;">Ravichander</span>
-        <p>  /ɑ.bʰi.ˈla.ʃə/  </p>
+      <!-- <p class="eyebrow">Tenure-track faculty member, Max Planck Institute for Software Systems</p> -->
+      <h2 id="intro-heading">
+        <span class="bold">Abhilasha</span>
+        <span class="light">Ravichander</span>
       </h2>
-      <hr>
+      <p class="pronunciation">/ɑ.bʰi.ˈla.ʃə/</p>
+      <p class="role">I am a tenure-track faculty member at the <a href="https://www.mpi-sws.org/"
+          target="_blank"><b>Max Planck Institute for Software Systems</b></a>, where I lead the <a
+          href="./group.html">QUEST NLP lab</a>. </p>
+      <p>My research focuses on building trustworthy AI systems by: (1) shedding light on how they work by understanding
+        how pretraining and posttraining data shape downstream behavior, (2) understanding why reasoning and factuality
+        fail and how to meaningfully advance these capabilities, and (3) developing methods to increase human agency in
+        the AI development pipeline. More broadly, my goal is to build responsible AI systems that amplify our
+        ability to create, think, and discover. My work has been recognized with the <b>ACL Outstanding Paper Award</b>,
+        <b>ACL Best Resource Paper Award</b>, <b>ACL Best Theme Paper Award</b>, and <b>Rising Star recognitions in
+          EECS, Data Science, and Generative AI</b>.
 
-     <b>Update: I will be joining the <a href="https://www.mpi-sws.org/" target="_blank">Max Planck Institute for Software Systems</a> as an Assistant Professor starting Fall 2025! I will be recruiting Ph.D. students and interns. Please see this <a href="./advising.html" target="_blank">page for more details</a>.</b></p>
-
-        I am a postdoctoral scholar at the <a href="https://nlp.washington.edu/" target="_blank"> Paul G. Allen Center for Computer Science and Engineering at the University of Washington</a>, where I work with <a href="https://yejinc.github.io/" target="_blank">Yejin Choi</a>.
-      I received my PhD from <a href="https://www.cs.cmu.edu/"
-         target="_blank">Carnegie Mellon University</a> in 2022.
-      
-
+        Previously, I was a postdoctoral scholar at the <a href="https://nlp.washington.edu/" target="_blank"><b>Paul G.
+            Allen Center for Computer Science and Engineering at the University of Washington</b></a>, and the <a
+          href="https://allenai.org/" target="_blank"><b>Allen Institute for AI</b></a>. I received my PhD from <a
+          href="https://www.cs.cmu.edu/" target="_blank"><b>Carnegie Mellon University</b></a> in 2022.
+      </p>
+      <div class="announcement">
+        <p>💫 <strong>I am recruiting interns for Fall 2026/Spring 2027!</strong> Please see <a href="./advising.html"
+            target="_blank">this page for more details</a>.</p>
+      </div>
     </div>
   </section>
 
   <main>
-    My research is dedicated to making AI models trustworthy. I develop frameworks  to ensure large language models (LLMs) are <b>factual</b>, <b>transparent</b>, and <b>robust</b>. My work focuses on three key areas:</br></br>
-
-     <b>Understanding Large Language Models:</b> Developing a scientific understanding of how large language models operate, and the principles that govern their behavior.</br>
-    <b>Enabling Transparency and Control:</b> Leveraging this understanding to construct new frameworks that provide greater transparency and give users more control over AI, including control over their data and how their data is used.</br>
-     <b>Developing User-Centric AI:</b> Fostering an understanding of the expectations and needs of the users of AI systems, in order to create AI that is responsible, high-performing, and aligned with user goals.</br></br>
-    
-    For more about my work, please see my <a href="#publications">publications</a>. 
-    <br /> <br /> 
-
-
- 
-
-<section id="news" style="text-align: left;">
-<!-- 
-    <div class="container" tabindex="-1"> -->
-
-        <!--Navigation bar-->
-        
-           <h2>What's New</h2>
-
-           🎤 Talk at TU Darmstadt. </br>
-
-           🎤 Talk at the University of Mannheim.  </br>
-
-           🏆 HALoGEN won the <b>outstanding paper award</b> at ACL 2025 🎉 </br>
-           
-           💫 Extremely excited to be joining the Max Planck Institute for Software Systems as an Assistant Professor in Fall 2025! </br>
-
-           🎤 I was on the <a href="https://open.spotify.com/show/51RJNlZarFTJXXIlz5Qx3M">Women in AI Research podcast</a>, to talk about LLM hallucinations and data-centric AI.</br>
-
-           <!-- 🎤 I was on the <a href="https://www.mindsmatterpodcast.com/">Women in AI Research podcast</a>, to talk about my research on LLM hallucinations</br> -->
-
-           🏆 HALoGEN won a <b>best paper award</b> at the TrustNLP workshop at NAACL 2025 🎉 </br>
-           
-           🎤 I am speaking in a panel on "Navigating Research in the Age of LLMs" at the <a href="https://www.winlp.org/winlp-2024-workshop/">Widening NLP workshop</a> at EMNLP 2024.</a></br>
-
-           ⭐ I am at the <a href="https://www.cics.umass.edu/events/rising-stars-generative-ai">"Rising Stars in Generative AI" workshop at UMass Amherst.</a></br>
-
-           🏆 OLMo won the <b>ACL 2024 Best Theme Paper Award</b> 🎉 </br>
-
-           🏆 Dolma won the <b>ACL 2024 Best Resource Paper Award</b> 🎉 </br>
-
-           🏆 Artifacts or Abduction? won a <b>best paper award</b> at <a href="https://www.mascsll.org/cfp/">MASC-SLL 2024</a> 🎉 </br>
-
-           📚 I am co-organizing the <a href="https://sites.google.com/view/privatenlp/">Workshop on Privacy in Natural Language Processing @ACL 2024</a></br>
-
-           📚 I co-organized the <a href="https://sites.google.com/view/repl4nlp2023">Workshop on Representation Learning for NLP @ ACL 2023</a>.  </br>
-
-           🎤 I was on the <a href="https://www.mindsmatterpodcast.com/">Minds Matter podcast</a>, to talk about AI!</br>
-
-           🎤 Talk at the National University of Singapore. </br>
-
-           🎤 Talk at UMass NLP.  </br>
-
-           ⭐ I am at the <a href="https://risingstars.utexas.edu/participants">Rising Stars in EECS workshop</a>
-           at the University of Texas at Austin. </br>
-
-           🏆 <a href="https://arxiv.org/abs/2211.00295">CondaQA</a> won a <b>best paper
-               award</b> at the <a href="https://socalnlp.github.io/symp22/index.html">2022 SoCal NLP
-               symposium</a> 🎉  </br>
-
-           <a href="./older_news.html">Older news.</a>
-
-           <!-- <div style="height:150px;border:1px solid #ccc;overflow:auto;">
-               <div class="label-striped"><a href="https://arxiv.org/abs/2402.00838">OLMo</a> won the <b>ACL 2024 Best Theme Paper Award</b> 🎉  </div>
-              <a href="https://arxiv.org/abs/2402.00159">Dolma</a> won the <b>ACL 2024 Best Resource Paper Award</b> 🎉 </br>
-              <div class="label-striped"><a href="https://arxiv.org/abs/2402.12483">Artifacts or Abduction?</a> was presented at <a href="https://www.mascsll.org/cfp/">MASC-SLL 2024</a> and won a <b>best paper
-                 award</b> 🎉 </div>
-              I am co-organizing the <a href="https://sites.google.com/view/privatenlp/">Workshop on Privacy in Natural Language Processing @ACL 2024</a></br>
-              <div class="label-striped">I co-organized the <a href="https://sites.google.com/view/repl4nlp2023">Workshop on Representation Learning for NLP @ ACL 2023</a>.  </div>
-              Talk at the National University of Singapore.</br>
-              <div class="label-striped">Talk at UMass NLP.  </div>
-              I will be at the <a href="https://risingstars.utexas.edu/participants">Rising Stars in EECS workshop</a>
-              at the University of Texas at Austin.</br>
-            <div style="height:150px;border:1px solid #ccc;overflow:auto;">
-                 -->
-
-              <!-- <div class="label-striped"><a href="https://arxiv.org/abs/2211.00295">CondaQA</a> won a <b>best paper
-                    award</b> at the <a href="https://socalnlp.github.io/symp22/index.html">2022 SoCal NLP
-                    symposium</a> 🎉 </div>
-              I was selected as a <a href="https://datascience.uchicago.edu/rising-stars-alumni/">Rising Star in Data
-                 Science</a> by the University of Chicago.</br>
-              <div class="label-striped">I was an outstanding reviewer at ACL 2020 and EMNLP 2020.</div>
-              I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series,
-              with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky.</br>
-              <div class="label-striped"> I will be speaking in a panel on "The Role of Active Privacy Management in a
-                 World Where the
-                 Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in
-                 Brussels, Belgium.
+    <div class="home-layout">
+      <div class="home-primary">
+        <section id="research" class="research-section" aria-labelledby="research-heading">
+          <h2 id="research-heading">Research Interests</h2>
+          <p class="research-lede">I am excited by language technologies that can help people understand the world and create new knowledge, while remaining grounded and transparent.</p>
+          <div class="research-grid">
+            <article class="research-item research-interpretability">
+              <svg class="research-visual" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+                <circle class="soft-fill" cx="42" cy="39" r="30"></circle>
+                <path class="stroke" d="M52 51 L73 72"></path>
+                <circle class="stroke" cx="38" cy="36" r="20"></circle>
+                <path class="stroke" style="stroke-width:2.4" d="M28 33 L42 28 L50 42 L36 49 Z"></path>
+                <circle class="mid-fill" cx="28" cy="33" r="4"></circle>
+                <circle class="mid-fill" cx="42" cy="28" r="4"></circle>
+                <circle class="mid-fill" cx="50" cy="42" r="4"></circle>
+                <circle class="mid-fill" cx="36" cy="49" r="4"></circle>
+              </svg>
+              <div class="research-copy">
+                <h3>Data-Centric Interpretability</h3>
+                <p>Data is one of the key components of modern AI training pipelines. I am interested in developing a
+                  principled understanding of how training data is shaping downstream model behavior, and how
+                  this can result in more effective design of large language models. I am also interested in advancing
+                  technologies that empower data contributors to exercise meaningful agency over their contributions.
+                </p>
               </div>
-              I will be helping lead a research team at the OurCS workshop at CMU. If you are an undergraduate woman,
-              please
-              do consider attending! Funds for hotels and meals will be provided.</br>
-              <div class="label-striped">I will be spending the summer interning at MSR Montreal with Adam Trischler
-                 and Kaheer Suleman,
-                 working on teaching machines commonsense reasoning.
+            </article>
+            <article class="research-item research-creativity">
+              <svg class="research-visual" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+                <circle class="soft-fill" cx="48" cy="48" r="31"></circle>
+                <path class="stroke" d="M50 80 C43 63 45 45 56 22"></path>
+                <ellipse class="mid-fill" cx="42" cy="61" rx="10" ry="5" transform="rotate(-30 42 61)"></ellipse>
+                <ellipse class="mid-fill" cx="57" cy="54" rx="10" ry="5" transform="rotate(28 57 54)"></ellipse>
+                <ellipse class="mid-fill" cx="44" cy="43" rx="9" ry="5" transform="rotate(-34 44 43)"></ellipse>
+                <ellipse class="mid-fill" cx="59" cy="35" rx="9" ry="5" transform="rotate(30 59 35)"></ellipse>
+                <path class="stroke" style="stroke-width:2.3" d="M48 67 C43 64 39 64 34 66"></path>
+                <path class="stroke" style="stroke-width:2.3" d="M52 50 C58 47 63 47 68 50"></path>
+              </svg>
+              <div class="research-copy">
+                <h3>AI Creativity</h3>
+                <p>I am interested in building models and evaluations for creativity and creative reasoning, moving
+                  beyond models that have
+                  been fitted to the mode of their training data distributions, toward systems that can expand human thought and uncover new possibilities.
+                </p>
               </div>
-              I will be attending ACL, YRRSDS and SIGDIAL 2018 in Melbourne. Ping me if you'd like to
-              chat!</br>
-              <div class="label-striped">Our work, "Stress Test Evaluation for Natural Language Inference" was an <a
-                    href="http://coling2018.org/coling-2018-best-papers/"><b>Area Chair Favorite Paper at COLING
-                       2018</b></a>!
+            </article>
+            <article class="research-item research-reliable">
+              <svg class="research-visual" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+                <path class="soft-fill" d="M48 12 L73 23 V42 C73 61 61 75 48 83 C35 75 23 61 23 42 V23 Z"></path>
+                <circle class="mid-fill" cx="48" cy="47" r="21"></circle>
+                <path class="stroke" d="M48 14 L71 24 V42 C71 59 60 72 48 80 C36 72 25 59 25 42 V24 Z"></path>
+                <circle class="stroke" style="stroke-width:2.5" cx="48" cy="37" r="6"></circle>
+                <circle class="stroke" style="stroke-width:2.5" cx="35" cy="45" r="5"></circle>
+                <circle class="stroke" style="stroke-width:2.5" cx="61" cy="45" r="5"></circle>
+                <path class="stroke" style="stroke-width:2.5" d="M36 61 C39 54 44 51 48 51 C52 51 57 54 60 61"></path>
+                <path class="stroke" style="stroke-width:2.5" d="M24 64 C27 58 31 55 35 55"></path>
+                <path class="stroke" style="stroke-width:2.5" d="M72 64 C69 58 65 55 61 55"></path>
+                <path class="stroke" style="stroke-width:3" d="M39 69 L47 76 L61 60"></path>
+              </svg>
+              <div class="research-copy">
+                <h3>Reliable Information Synthesis</h3>
+                <p>I am interested in building AI-powered information systems that provide accurate, trustworthy, and contextually useful information in real-world settings. Here, I am also motivated by understanding the effects of the growing role of AI agents as intermediaries between people and information: systems that are searching, synthesizing, reasoning, and sometimes even acting on behalf of users.
+</p>
               </div>
-              I will be at the <a href="https://newgeneralization.github.io/">Generalization in Deep
-                 Learning</a> workshop at NAACL 2018. Ping me if you'd like to chat!</br>
-              <div class="label-striped">I will be starting my PhD at the Language Technologies Institute, Carnegie
-                 Mellon University in
-                 Fall 2018.
-              </div>
-              I am at the <a href="http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in
-              Tubingen. Let me know if you'd like to meet up!</br>
-              <div class="label-striped">Our team was selected to participate in the <a
-                    href="https://developer.amazon.com/alexaprize">Alexa
-                    Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the
-                 selected teams.
-              </div>
-              Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in
-              10-701 (Introduction to Machine Learning (PhD)).</br>
-           </div> -->
+            </article>
+          </div>
+          <p>For more about our group's work, see my <a href="./publications.html">publications</a> or visit the <a
+              href="./group.html">lab page</a>.</p>
+        </section>
 
+        <section id="news">
+          <h2>Recent Media and Talks</h2>
+          <ul class="news-list">
+            <li>Talk at the University of Saarland.</li>
+            <li>Talk at Microsoft Research India.</li>
+            <li><b>Keynote</b> at CHOMPS workshop @ AACL 2025.</li>
+            <li>Talk at IndoML 2025.</li>
+            <li>Talk at Cohere Research Connections.</li>
+            <li>Talk at the University of Sheffield</li>
+            <li>Talk at TU Darmstadt.</li>
+            <li>Talk at the University of Mannheim.</li>
+            <li>I was on the <a href="https://open.spotify.com/show/51RJNlZarFTJXXIlz5Qx3M">Women in AI Research
+                podcast</a>, to talk about LLM hallucinations and data-centric AI.</li>
+            <li><b>Panelist</b> on "Navigating Research in the Age of LLMs" at the <a
+                href="https://www.winlp.org/winlp-2024-workshop/">Widening NLP workshop</a> at EMNLP 2024.</li>
+            <li>Participant in the <a href="https://www.cics.umass.edu/events/rising-stars-generative-ai"><b>"Rising
+                  Stars in Generative AI" workshop</b> at UMass Amherst.</a></li>
+            <li>I was on the <a href="https://www.mindsmatterpodcast.com/">Minds Matter podcast</a>, to talk about AI.
+            </li>
+            <li>Talk at the National University of Singapore.</li>
+            <li>Talk at UMass NLP.</li>
+            <li>Participant in the <a href="https://risingstars.utexas.edu/participants"><b>Rising Stars in EECS
+                  workshop</b></a> at the University of Texas at Austin.</li>
+            <li><a href="./older_news.html">Older news.</a></li>
+          </ul>
+        </section>
 
-           <!--       class="table table-striped"
-              <table> -->
-           <!--       <table>
-              <tbody>
-                        
-                <li> I was recognized as an outstanding reviewer at ACL 2020 and EMNLP 2020. </li>.
-                      <li> I started the <a href="https://nlpwithfriends.com/">NLP With Friends</a> online seminar series, with my wonderful co-organizers Zeerak Waseem, Yanai Elazar and Liz Salesky. </li>.
-              
-                      <li> I will be speaking in a panel on "The Role of Active Privacy Management in a World Where the Consent Model Breaks Down" at <a href="https://www.cpdpconferences.org/">CPDP 2020</a> in Brussels, Belgium.</li>.
-                      <li> I will be helping organize the OurCS workshop at CMU. If you are an undergraduate woman, please do consider attending! Funds for hotels and meals will be provided.</li>.
-              
-                <li> I will be spending the summer interning at MSR Montreal with Adam Trischler and Kaheer Suleman, working on teaching machines commonsense reasoning.</li>
-                <li> I will be attending ACL, YRRSDS and SIGDIAL 2018 in Melbourne. Ping me if you'd like to chat!</li>
-                <li>Our work, "Stress Test Evaluation for Natural Language Inference" was an <a href = "http://coling2018.org/coling-2018-best-papers/">Area Chair Favorite Paper at COLING 2018</a>!  </li>
-              
-                <li> I will be at the <a href = "https://newgeneralization.github.io/">Generalization in Deep Learning</a> workshop at NAACL 2018. Ping me if you'd like to chat!</li>
-                <li> I will be starting my PhD at the Language Technologies Institute, Carnegie Mellon University in Fall 2018.</li>
-               <li>I am at the <a href = "http://mlss.tuebingen.mpg.de/2017/">Machine Learning Summer School</a> in Tubingen. Let me know if you'd like to meet up! </li>
-              <li>Our team was selected to participate in the <a href = "https://developer.amazon.com/alexaprize">Alexa Prize</a> with a 100,000$ stipend and additional support from Amazon! Congratulations to all the selected teams.</li>
-              <li>Our work on "A Persistent Homology Approach to Document Clustering" won the best poster award in 10-701 (Introduction to Machine Learning (PhD)). </li>
-              <li></li>
-              </tbody></table> -->
-        <!-- </div> -->
-     </div>
-
-</section>
-
-   
-
+      </div>
+    </div>
   </main>
 
   <footer>
-    Last updated May 2025. 
+    Last updated May 2026.
   </footer>
 </body>
+
 </html>

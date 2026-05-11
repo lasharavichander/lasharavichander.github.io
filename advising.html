@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script src="https://kit.fontawesome.com/08daa0274c.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <!-- <style>
@@ -124,33 +124,46 @@
       line-height: 1.6;
     }
     header {
-      background-color: #ffffff;
-      color: #111827;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e7e5e4;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
     header h1 {
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #1c1917;
+      letter-spacing: 0.3px;
     }
     nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
     nav a {
-      color: #111827;
+      color: #57534e;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      letter-spacing: 0.2px;
     }
-    nav a:hover {
-      color: #3b82f6;
+    nav a:hover,
+    nav a.active {
+      color: #1c1917;
     }
     .intro {
       display: flex;
@@ -210,22 +223,31 @@
   width: 80%;
   margin: 0 auto; /* Centers the container horizontally */
 }
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- <h1>Abhilasha Ravichander</h1> -->
-    <h1>
-        <span style="font-weight: 400;">Abhilasha</span>
-        <span style="font-weight: 400;">Ravichander</span>
-      </h1>
+    <div class="header-content">
+      <h1>Abhilasha Ravichander</h1>
       <nav>
         <a href="./index.html">Home</a>
         <a href="./publications.html">Publications</a>
-
-        <a href="./advising.html">Contact</a>
+        <a href="./group.html">People</a>
+        <a href="./contact.html">Opportunities</a>
         <a href="./talks.html">Short Bio</a>
+        <a href="./awards.html">Awards</a>
       </nav>
+    </div>
   </header>
 
 

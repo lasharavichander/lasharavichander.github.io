@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhilasha Ravichander - Research Group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #ffffff;
+      color: #292524;
+      line-height: 1.7;
+    }
+    
+    header {
+      background: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e7e5e4;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #1c1917;
+      letter-spacing: 0.3px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #57534e;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      letter-spacing: 0.2px;
+    }
+    
+    nav a:hover,
+    nav a.active {
+      color: #1c1917;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    
+    .lab-banner {
+      background: linear-gradient(135deg, #f5f5f4 0%, #e7e5e4 100%);
+      border: 1px solid #d6d3d1;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    
+    .lab-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1c1917;
+      margin-bottom: 0.001rem;
+      letter-spacing: 1px;
+    }
+
+    .lab-banner h4 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #57534e;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.2px;
+    }
+    
+    .lab-banner p {
+      color: #44403c;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #1c1917;
+      margin-bottom: 3rem;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+    
+    .section {
+      margin-bottom: 3.5rem;
+    }
+    
+    .section-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #292524;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+    
+    .info-box {
+      background: #f5f5f4;
+      border-left: 3px solid #78716c;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #44403c;
+    }
+    
+    .info-box a {
+      color: #292524;
+      text-decoration: underline;
+      text-decoration-color: #d6d3d1;
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.2s ease;
+    }
+    
+    .info-box a:hover {
+      text-decoration-color: #78716c;
+    }
+
+    .heading-with-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.50rem;
+      margin-bottom: 3rem;
+    }
+    .heading-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .person-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .person-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      margin-right: 1rem;
+    }
+    
+    .person-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #f5f5f4;
+      border: 2px solid #e7e5e4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+    
+    .person-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .person-photo-placeholder {
+      color: #a8a29e;
+      font-size: 2rem;
+    }
+    
+    .person-item:hover .person-photo {
+      border-color: #78716c;
+    }
+    .person-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    
+    .person-link {
+      color: #292524;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s ease;
+      text-align: center;
+    }
+    
+    .person-link:hover {
+      color: #1c1917;
+    }
+
+    .person-role {
+      font-size: 0.85rem;
+      color: #78716c;
+      font-style: italic;
+      text-align: center;
+    }
+    
+    .collaborators-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .collaborator-card {
+      padding: 0;
+    }
+    
+    .collaborator-card a {
+      color: #1c1917;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      display: inline-block;
+      margin-bottom: 0.2rem;
+    }
+    
+    .collaborator-card a:hover {
+      color: #57534e;
+    }
+    
+    .collaborator-role {
+      color: #57534e;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      font-weight: 300;
+    }
+    
+    .collaborator-affiliation {
+      font-style: italic;
+      color: #78716c;
+    }
+    
+    .outcome {
+      color: #1c1917;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      font-weight: 500;
+      padding-left: 0.5rem;
+      border-left: 2px solid #d6d3d1;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #78716c;
+      font-size: 0.9rem;
+      border-top: 1px solid #e7e5e4;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      nav {
+        width: 100%;
+      }
+
+      .person-role {
+        font-size: 0.85rem;
+      }
+      
+      .collaborators-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Abhilasha Ravichander</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./group.html" class="active">People</a>
+        <a href="./contact.html">Opportunities</a>
+        <a href="./talks.html">Short Bio</a>
+        <a href="./awards.html">Awards</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Lab Banner Section - Replace content with your lab information -->
+    <div class="lab-banner">
+      <h3>QUEST Lab</h3>
+      <h4>Quest for Understanding, Exploration, Synthesis, and Trust</h4>
+      <p>Welcome to QUEST Lab!
+        We are a team of researchers at the Max Planck Institute for Software Systems, studying how artificial intelligence can help us understand the world and generate new knowledge, and how we can, in turn, better understand and design AI.
+      </p>
+    </div>
+    <!-- <div class="heading-with-logo">
+      <img src="./resources/lab/lab_mascot.png" alt="QUEST Lab Logo" class="heading-logo">
+      <h2>Group</h2>
+    </div> -->
+    
+    <h2>Group</h2></br>
+    
+    <!-- <div class="section">
+      <div class="section-title">Students</div>
+      <div class="info-box">
+        Recruiting PhD students! Please see <a href="./contact.html">this page for more details</a>.
+      </div>
+      <div class="person-list">
+        Add student items here when you have students -->
+        <!-- Example:
+        <div class="person-item">
+          <div class="person-photo">
+            <img src="path-to-photo.jpg" alt="Student Name">
+          </div>
+          <a href="student-website.com" target="_blank" class="person-link">Student Name</a>
+        </div>
+        -->
+      <!-- </div>
+    </div> -->
+
+    <div class="section">
+
+      <div class="person-list">
+        <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/ai2_pp.png" alt="Abhilasha Ravichander">
+          </div>
+          <div class="person-info">
+            <a href="https://lasharavichander.github.io/" target="_blank" class="person-link">Abhilasha Ravichander</a>
+            <span class="person-role">PI</span>
+          </div>
+        </div>
+
+      <div class="person-list">
+        <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/sheikh.png" alt="Sheikh Shafayat">
+          </div>
+          <div class="person-info">
+            <a href="https://sheikhshafayat.github.io/" target="_blank" class="person-link">Sheikh Shafayat</a>
+            <span class="person-role">Research Intern</span>
+          </div>
+        </div>
+
+
+        <div class="person-list">
+          <div class="person-item">
+            <div class="person-photo">
+              <!-- <span class="person-photo-placeholder">👤</span> -->
+              <img src="./resources/lab/noam.jpeg" alt="Noam Dahan">
+            </div>
+            <div class="person-info">
+            <a href="https://github.com/edahanoam" target="_blank" class="person-link">Noam Dahan</a>
+            <span class="person-role">Research Intern</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="person-list">
+        <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/advaith.png" alt="Advaith Malladi">
+          </div>
+          <div class="person-info">
+          <a href="https://advaithmall.github.io/" target="_blank" class="person-link">Advaith Malladi</a>
+          <span class="person-role">Research Intern</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </br></br>
+
+    <div class="section">
+      <div class="section-title">Current and Past Student Collaborators</div>
+      <div class="collaborators-grid">
+        <div class="collaborator-card">
+          <a href="https://aflah02.github.io/" target="_blank">Mohammad Aflah Khan</a>
+          <div class="collaborator-role">
+            Research Software Engineer<br>
+            <span class="collaborator-affiliation">Max Planck Institute for Software Systems</span>
+            
+          </div>
+        </div>
+        <div class="collaborator-card">
+          <a href="https://nbalepur.github.io/" target="_blank">Jaydeep Borkar</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">Northeastern University</span>
+          </div>
+        </div>
+
+        <div class="collaborator-card">
+          <a href="https://nbalepur.github.io/" target="_blank">Marlene Lutz</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Mannheim</span>
+          </div>
+        </div>
+
+        <div class="collaborator-card">
+          Julian Schlenker
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Mannheim</span>
+          </div>
+        </div>
+
+        <div class="collaborator-card">
+          <a href="https://nbalepur.github.io/" target="_blank">Nishant Balepur</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Maryland</span>
+          </div>
+        </div>
+        
+        <div class="collaborator-card">
+          <a href="https://k1rezaei.github.io/" target="_blank">Keivan Rezaei</a>
+          <div class="collaborator-role">
+            AI2 Intern & PhD Student<br>
+            <span class="collaborator-affiliation">University of Maryland</span>
+            <!-- <div class="outcome">→ Research Scientist @ Google Deepmind</div> -->
+          </div>
+        </div>
+
+        <div class="collaborator-card">
+          <a href="https://x.com/alex_gill_nlp" target="_blank">Alex Gill</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Utah</span>
+          </div>
+        </div>
+        
+
+        
+
+        <div class="collaborator-card">
+          <a href="https://shrustighela.com/" target="_blank">Shrusti Ghela</a>
+          <div class="collaborator-role">
+            MS Student<br>
+            <span class="collaborator-affiliation">University of Washington</span>
+            
+          </div>
+        </div>
+        
+        <div class="collaborator-card">
+          <a href="https://skylerhallinan.com/" target="_blank">Skyler Hallinan</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Southern California</span>
+          </div>
+          <div class="outcome">→ Researcher @ Microsoft AI</div>
+        </div>
+        
+        <div class="collaborator-card">
+          <a href="https://bnewm0609.github.io/" target="_blank">Benjamin Newman</a>
+          <div class="collaborator-role">
+            PhD Student<br>
+            <span class="collaborator-affiliation">University of Washington</span>
+          </div>
+        </div>
+        
+        <div class="collaborator-card">
+          <a href="https://yufeitian.github.io/website/" target="_blank">Yufei Tian</a>
+          <div class="collaborator-role">
+            AI2 Intern & PhD Student<br>
+            <span class="collaborator-affiliation">University of Southern California</span>
+            <div class="outcome">→ Researcher @ OpenAI</div>
+          </div>
+        </div>
+        
+        <div class="collaborator-card">
+          <a href="https://wadeyin9712.github.io/" target="_blank">Da Yin</a>
+          <div class="collaborator-role">
+            AI2 Intern & PhD Student<br>
+            <span class="collaborator-affiliation">University of Southern California</span>
+            <div class="outcome">→ Postdoctoral Researcher @ Meta FAIR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Last updated May 2025.
+  </footer>
+</body>
+</html>
