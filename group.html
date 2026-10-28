@@ -279,6 +279,82 @@
       padding-left: 0.5rem;
       border-left: 2px solid #d6d3d1;
     }
+
+    /* Alumni list: one line per alumni, matching collaborator sizing */
+    .alumni-list {
+      margin-top: 0.3rem;
+    }
+
+    .alumni-section {
+      margin-bottom: 2rem;
+    }
+
+    .alumni-section .section-title {
+      margin-bottom: 0.5rem;
+    }
+
+    .alumni-subtitle {
+      color: #57534e;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .alumni-item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem; /* match collaborator names */
+      color: #292524;
+    }
+
+    .alumni-item::before {
+      content: "•";
+      color: #78716c;
+      flex: 0 0 auto;
+    }
+
+    .alumni-name {
+      font-weight: 500;
+      color: #1c1917;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .alumni-name a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .alumni-affiliation {
+      color: #78716c;
+      font-style: italic;
+    }
+
+    /* Outcome now appears inline next to the name and is de-emphasized */
+    .alumni-outcome {
+      color: #6b7280; /* muted */
+      font-weight: 400; /* non-bold */
+      font-size: 0.95rem;
+      margin-left: -0.25rem;
+      white-space: nowrap;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 600px) {
+      .alumni-item {
+        flex-wrap: wrap;
+        gap: 0.35rem;
+      }
+      .alumni-outcome {
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+      }
+    }
     
     footer {
       text-align: center;
@@ -383,56 +459,109 @@
           </div>
           <div class="person-info">
             <a href="https://sheikhshafayat.github.io/" target="_blank" class="person-link">Sheikh Shafayat</a>
+            <span class="person-role">PhD Student</span>
+          </div>
+        </div>
+
+                <div class="person-item">
+          <div class="person-photo">
+            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/aflah.jpg" alt="Mohammad Aflah Khan">
+          </div>
+          <div class="person-info">
+            <a href="https://aflah02.github.io/" target="_blank" class="person-link">Mohammad Aflah Khan</a>
+            <span class="person-role">PhD Student (coadvised with Krishna Gummadi)</span>
+          </div>
+        </div>
+                <div class="person-item">
+          <div class="person-photo">
+            <img src="./resources/lab/yuru.JPG" alt="Yuru Jiang">
+          </div>
+          <div class="person-info">
+            <a href="https://github.com/yurujiang2003" target="_blank" class="person-link">Yuru Jiang</a>
             <span class="person-role">Research Intern</span>
           </div>
         </div>
 
-        <div class="person-item">
+                <div class="person-item">
           <div class="person-photo">
-            <!-- <span class="person-photo-placeholder">👤</span> -->
+            <img src="./resources/lab/tushar.png" alt="Tushar Anand">
+          </div>
+          <div class="person-info">
+            <a href="#" target="_blank" class="person-link">Tushar Anand</a>
+            <span class="person-role">Research Intern</span>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="person-item">
+          <div class="person-photo">
             <img src="./resources/lab/noam.jpeg" alt="Noam Dahan">
           </div>
           <div class="person-info">
             <a href="https://github.com/edahanoam" target="_blank" class="person-link">Noam Dahan</a>
             <span class="person-role">Research Intern</span>
           </div>
-        </div>
+        </div> -->
 
-        <div class="person-item">
+        <!-- <div class="person-item">
           <div class="person-photo">
-            <!-- <span class="person-photo-placeholder">👤</span> -->
             <img src="./resources/lab/advaith.png" alt="Advaith Malladi">
           </div>
           <div class="person-info">
             <a href="https://advaithmall.github.io/" target="_blank" class="person-link">Advaith Malladi</a>
             <span class="person-role">Research Intern</span>
           </div>
-        </div>
-
+        </div> -->
+<!-- 
         <div class="person-item">
           <div class="person-photo">
-            <!-- <span class="person-photo-placeholder">👤</span> -->
             <img src="./resources/lab/Abdullah_Hashmat_MPI.jpg" alt="Abdullah Hashmat">
           </div>
           <div class="person-info">
             <a href="https://hashmat02.github.io/" target="_blank" class="person-link">Abdullah Hashmat</a>
             <span class="person-role">Research Intern</span>
           </div>
+        </div> -->
+      </div>
+    </div>
+
+
+    <div class="section alumni-section">
+      <div class="section-title">QUEST Alumni</div>
+      <div class="alumni-subtitle">Research Interns</div>
+      <div class="alumni-list">
+        <div class="alumni-item">
+          <div class="alumni-name"><a href="https://github.com/edahanoam" target="_blank">Noam Dahan</a></div>
+          <!-- <div class="alumni-affiliation">M.S., HUJI </div> -->
+          <div class="alumni-outcome">(→ PhD, Carnegie Mellon University)</div>
         </div>
+                <div class="alumni-item">
+          <div class="alumni-name"><a href="https://advaithmall.github.io/" target="_blank">Advaith Malladi</a></div>
+          <!-- <div class="alumni-affiliation">B.S./M.S., IIIT Hyderabad  </div> -->
+          <div class="alumni-outcome">(→ PhD, University of North Carolina- Chapel Hill)</div>
+        </div>
+                <div class="alumni-item">
+          <div class="alumni-name"><a href="https://hashmat02.github.io/" target="_blank">Abdullah Hashmat</a></div>
+          <!-- <div class="alumni-affiliation">B.S., LUMS </div> -->
+          <!-- <div class="alumni-outcome">(→ TBD)</div> -->
+        </div>
+        <!-- Add more alumni similarly: name (link), affiliation, then inline outcome -->
       </div>
     </div>
 
     <div class="section">
       <div class="section-title">Current and Past Student Collaborators</div>
       <div class="collaborators-grid">
-        <div class="collaborator-card">
+        <!-- <div class="collaborator-card">
           <a href="https://aflah02.github.io/" target="_blank">Mohammad Aflah Khan</a>
           <div class="collaborator-role">
             Research Software Engineer<br>
             <span class="collaborator-affiliation">Max Planck Institute for Software Systems</span>
             
           </div>
-        </div>
+        </div> -->
         <div class="collaborator-card">
           <a href="https://jaydeepborkar.github.io/" target="_blank">Jaydeep Borkar</a>
           <div class="collaborator-role">
@@ -470,7 +599,7 @@
           <div class="collaborator-role">
             AI2 Intern & PhD Student<br>
             <span class="collaborator-affiliation">University of Maryland</span>
-            <!-- <div class="outcome">→ Research Scientist @ Google Deepmind</div> -->
+            <div class="outcome">→ Research Scientist @ Google Deepmind</div>
           </div>
         </div>
 
@@ -490,6 +619,7 @@
           <div class="collaborator-role">
             MS Student<br>
             <span class="collaborator-affiliation">University of Washington</span>
+            <div class="outcome">→ PhD Student, University of Utah</div>
             
           </div>
         </div>
